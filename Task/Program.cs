@@ -2,10 +2,12 @@
 // Первоначальный массив можно ввести с клавиатуры, либо задать на старте выполнения алгоритма. 
 // При решении не рекомендуется пользоваться коллекциями, лучше обойтись исключительно массивами.
 
-string [] array = {"Hello", "2", "world",":-)"};
-
+string[] array = { "Hello", "2", "world", ":-)" };
+List<string> newArray = new List<string>();
 foreach (string item in array)
 {
-    if (item.Length<=3)
-    System.Console.Write(item+ ", ");
+    if (item.Length <= 3)
+        newArray.Add('"' + item + '"');
 }
+System.Console.WriteLine("[" + string.Join(", ", newArray) + "]");
+
